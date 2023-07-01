@@ -33,9 +33,10 @@ def get_filters():
             print("Invalid city selection. Please try again.")
             city = input("We currently have data for Chicago, New York, and Washington. \nPlease enter a city (Chicago, New York, or Washington): ")
 
+        month_list= ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "all"]
         # get user input for month (all, january, february, ... , june)
         month = input("Which month would you like data for? \nPlease enter 1 (January) - 12 (December) or 'all' for no month filter: ")
-        while month.lower() not in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "all"]:
+        while month.lower() not in month_list:
             print("Invalid month selection. Please try again.")
             city = input("Which month would you like data for? \n1-12 or 'all' for no month filter: ")
 
