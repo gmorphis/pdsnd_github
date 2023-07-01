@@ -1,6 +1,6 @@
 # Bikeshare
 
-Bikeshare is a python program for exploring and analyzing bikeshare data from either Chicago, New York or Washington cities.
+Bikeshare is a python program for exploring and analyzing bikeshare data from either Chicago, New York or Washington cities. This was originally created as project 2 for _Programming for Data Science with Python_
 
 ## Installation
 
