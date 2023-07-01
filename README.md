@@ -1,17 +1,25 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+# Bikeshare
 
-### Date created
-Include the date you created this project and README file.
+Bikeshare is a python program for exploring and analyzing bikeshare data from either Chicago, New York or Washington cities.
 
-### Project Title
-Replace the Project Title
+## Installation
 
-### Description
-Describe what your project is about and what it does
+If needed, download and install [python](https://www.python.org/). Download and unzip Bikeshare.zip to a directory on your computer.  
 
-### Files used
-Include the files used
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+## Usage
 
+```python
+python bikeshare.py
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
+## License
+
+bikeshare.py is a public domain work, dedicated using [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Feel free to do whatever you want with it.
+
+_this readme was created using [makeareadme.com](https://www.makeareadme.com/)_
