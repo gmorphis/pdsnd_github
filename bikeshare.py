@@ -33,14 +33,11 @@ def get_filters():
             print("Invalid city selection. Please try again.")
             city = input("We currently have data for Chicago, New York, and Washington. \nPlease enter a city (Chicago, New York, or Washington): ")
 
-
         # get user input for month (all, january, february, ... , june)
         month = input("Which month would you like data for? \nPlease enter 1 (January) - 12 (December) or 'all' for no month filter: ")
         while month.lower() not in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "all"]:
             print("Invalid month selection. Please try again.")
             city = input("Which month would you like data for? \n1-12 or 'all' for no month filter: ")
-
-
 
         # get user input for day of week (all, monday, tuesday, ... sunday)
         day = input("Which day of the week would you like data for? Please enter 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri' ,'Sat', or 'all' for no day filter: ")
@@ -54,10 +51,8 @@ def get_filters():
                              'All' if day.lower() == 'all' else day.capitalize()
                      ))
 
-
     print('-'*40)
     return city, month, day
-
 
 def load_data(city, month, day):
     """
@@ -72,7 +67,6 @@ def load_data(city, month, day):
     """
     df = pd.read_csv(CITY_DATA[city])
 
-
     if city == 'washington': #washington is missing these 2 columns, add them to normalize the data
         df['Gender'] = pd.Series(dtype=str)  # Adding an empty column 'Gender'
         df['Birth Year'] = pd.Series(dtype=float) 
@@ -81,7 +75,6 @@ def load_data(city, month, day):
     #print(df.head())
     if month != 'all':
         df = df[df['Start Time'].dt.month == int(month)]
-
 
     #Monday is 0 and Sunday is 6
     day_num = 0
@@ -95,11 +88,7 @@ def load_data(city, month, day):
         elif day == 'sat': day_num = 5
         df = df.loc[df['Start Time'].dt.weekday == int(day_num)]
 
-
-    #print(df)
-
     return df
-
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -145,7 +134,6 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -169,7 +157,6 @@ def station_stats(df):
     print('-'*40)
     
 
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -180,16 +167,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    
-    #df['Start Time'] = pd.to_datetime(df['Start Time'])
-    #df['End Time'] = pd.to_datetime(df['End Time'])
-
     #df['Travel Time'] = df['End Time'] - df['Start Time']
     travel_time = df['Trip Duration'].sum()
 
     # display total travel time
     print("The total travel time is: ", travel_time)
-
 
     # display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
@@ -277,11 +259,8 @@ def chunkify(df):
         user_input = input("Enter 'no' to return to the main screen or press enter to keep seeing the data: ") 
         if user_input.lower() == "no":
             break
-
     
     return
-
-
 
 
 if __name__ == "__main__":
