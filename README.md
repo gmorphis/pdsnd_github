@@ -4,7 +4,7 @@ Bikeshare is a python program for exploring and analyzing bikeshare data from ei
 
 ## Installation
 
-If needed, download and install [python](https://www.python.org/). Download and unzip Bikeshare.zip to a directory on your computer.  
+If needed, download and install [python](https://www.python.org/). Download and unzip Bikeshare.zip to a directory on your computer. This usually comes preinstalled with MAC and Linux 
 
 
 ## Usage
